@@ -2,6 +2,10 @@
   
 Multiple Applications built on php, python, go and nodejs. To route the traffic over multiple application used name-based routing by a nginx proxy pass configuration.
 
+## Prerequisites
+   1. Docker (click [here](https://docs.docker.com/get-docker/) to see installation guide)
+   2. Docker compose (click [here](https://docs.docker.com/compose/install/) to see installation guide)
+
 ## Building all docker images</br>
 
 1. Navigate to base dir and execute `build-images.sh` file in order to build all images.
@@ -23,6 +27,10 @@ Usage:
           node = Node App only
           php = PHP app only
       2. Second argument: Application version( 2020.1)
+```
+> Build docker images
+```bash
+ ./build-images.sh all 2020.1
 ```
 
 2. After building all images, execute deocker compose file to run the entire app.
