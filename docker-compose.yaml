@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  nodeapp:
+    image: nodeapp:2020.1
+    networks:
+      - multiapp
+
+  phpapp:
+    image: phpapp:2020.1
+    networks:
+      - multiapp
+
+  pyapp:
+    image: pyapp:2020.1
+    networks:
+      - multiapp
+
+  goapp:
+    image: goapp:2020.1
+    networks:
+      - multiapp
+
+  webapp:
+    image: web:2020.1
+    ports:
+      - 80:80
+    networks:
+      - multiapp
+    depends_on:
+      - phpapp
+      - pyapp
+      - goapp
+      - nodeapp
+
+networks:
+  multiapp:
+    driver: bridge
