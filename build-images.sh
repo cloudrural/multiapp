@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # vars for docker staging
-basedir=$(PWD)
+basedir=$(pwd)
 version=$2
 build_exec="/usr/bin/docker"
 set=$1
@@ -52,7 +52,7 @@ function _nginx_() {
   echo "Nginx webapp image successfully created.....!"
 }
 
-if [ set == all ]; then
+if [ $set == all ]; then
    _nodeapp_
    _phpapp_
    _goapp_
