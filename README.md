@@ -33,7 +33,7 @@ Usage:
  ./build-images.sh all 2020.1
 ```
 
-2. After building all images, execute deocker compose file to run the entire app.
+2. After building all images, execute docker compose file to run the entire app.
 
 ```bash
 $ docker-compose up -d
