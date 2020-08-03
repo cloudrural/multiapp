@@ -79,6 +79,7 @@ if [ $set == all ]; then
    _pyapp_
    _nginx_
    echo "Successfully Built all images of Multiapp Deployment"
+fi;
 
 if [ $set == "--help" ]; then
    _help_
